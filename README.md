@@ -34,6 +34,6 @@ The idea is using computer vision in order to annotate corrosion particles semi-
 
 ## Author 
 
-Anes SADAOUI -  In the context of a Master 2 (2024/2025) intership at CNRS under the supervision of Slava Shkirskiy
+Anes SADAOUI -  In the context of a Master 2 (2024/2025) intership at CNRS under the supervision of Slava  SHKIRSKIY.
 
 
