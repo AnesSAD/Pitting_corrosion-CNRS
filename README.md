@@ -1,1 +1,0 @@
-# Machine_learning_for_industry_projects
