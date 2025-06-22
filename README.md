@@ -14,7 +14,7 @@ The idea is using computer vision in order to annotate corrosion particles semi-
 
 ## Structure
 
-📁 dataset/ – data  
+📁 Dataset/ – data  
 📁 src/ – main code  
 📁 notebooks/ – Initial exploration  
 📄 README.md  
