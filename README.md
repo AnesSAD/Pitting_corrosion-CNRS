@@ -13,6 +13,7 @@ The idea is using computer vision in order to annotate corrosion particles semi-
 - Visualisation of the results and tracking performances of the model
 
 ## Structure
+
 📁 dataset/ – data
 📁 src/ – main code
 📁 notebooks/ – Initial exploration
