@@ -14,11 +14,11 @@ The idea is using computer vision in order to annotate corrosion particles semi-
 
 ## Structure
 
-📁 dataset/ – data
-📁 src/ – main code
-📁 notebooks/ – Initial exploration
-📄 README.md
-📄 requirements.txt
+📁 dataset/ – data  
+📁 src/ – main code  
+📁 notebooks/ – Initial exploration  
+📄 README.md  
+📄 requirements.txt  
 
 ## Dependencies 
 
