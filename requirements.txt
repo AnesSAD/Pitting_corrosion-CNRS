@@ -1,0 +1,5 @@
+torch
+numpy
+open-cv
+matplotlib
+scikit-learn
