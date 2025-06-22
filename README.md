@@ -8,7 +8,7 @@ The idea is using computer vision in order to annotate corrosion particles semi-
 - Pre-treatment of microscopic images
 - Particle detection using open-cv and semi-automatic annotation (0:no Particle, 1:Particle)
 - Build a convolutional neural network from scratch (Unet++)
-- Performance evaluation of the model (Dice score, mAP, IoU)
+- Performance evaluation of the model (Dice score, accuracy, precision...)
 - Fine-tuning of the model (hyper-parameters, architecture)
 - Visualisation of the results and tracking performances of the model
 
