@@ -14,7 +14,7 @@ The idea is using computer vision in order to annotate corrosion particles semi-
 
 ## Structure
 
-📁 Videos/ – data  
+📁 Videos/ – data  Makogon, A., & SHKIRSKIY, S. (2025). Zenodo. https://doi.org/10.5281/zenodo.14653184  
 📁 src/ – main code  
 📁 notebooks/ – Initial exploration  
 📄 README.md  
