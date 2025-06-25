@@ -18,7 +18,7 @@ def train_fn(data_loader, model, optimizer, loss):
     image = image.to(DEVICE)
     mask = mask.to(DEVICE)
 
-    optimizer.zero_grad() # Rest les gradient à 0 après chaque batch
+    optimizer.zero_grad() # Gradient reset to 0 after each batch
 
     out = model(image)
     l = loss(out,mask)
@@ -37,7 +37,7 @@ def eval_fn(data_loader, model, optimizer, loss):
   total_loss = 0.0
   DEVICE = torch.device('cuda' if torch.cuda.is_available() else 'cpa')
 
-  with torch.no_grad(): # Cette fois-ci on ne calcule même pas les grades:
+  with torch.no_grad(): # No gradients at all for the inference:
 
     for image, mask, image_path, mask_path in data_loader:
 
