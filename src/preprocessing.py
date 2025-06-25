@@ -1,4 +1,4 @@
-import numpy as np
+ropimport numpy as np
 import cv2 as cv
 from skimage.filters.rank import entropy
 from skimage.morphology import disk
@@ -30,7 +30,7 @@ def extract_patches(image, patch_size=200, stride=100, entropy_thresh=3.0, conce
             patch = image[y:y + patch_size, x:x + patch_size]
             patches[f"{concentration}_{frame}_{patch_id:.3f}"].append(patch)
 
-            # Filtrage par entropie
+            # Entropic filtering
             if compute_entropy(patch) >= entropy_thresh:
                 patch_uint8 = (patch * 255).astype(np.uint8)
                 patch_id += 1    
