@@ -13,12 +13,12 @@ class UNET(nn.Module):
       self.pool = nn.MaxPool2d(kernel_size=2,stride=2)
 
 
-      # Partie descendante
+      # ENCODER
       for feature in features:
         self.downs.append(DoubleConv(in_channels,feature))
         in_channels = feature
 
-      #Partie montante
+      # DECODER
       for feature in features[::-1] :
         self.ups.append(nn.ConvTranspose2d(feature*2,feature,kernel_size=2,stride=2))
         self.ups.append(DoubleConv(feature*2,feature))
@@ -58,7 +58,7 @@ class DoubleConv(nn.Module):
     super(DoubleConv, self).__init__()
 
     self.conv = nn.Sequential(
-        nn.Conv2d(in_channels,out_channels, 3, 1, 1, bias=False), # 3 : Noyau de convolution 3*3, 1 : pas de la convolution, 1: pixel ajouté en bordure
+        nn.Conv2d(in_channels,out_channels, 3, 1, 1, bias=False), # 3 : convolutional core 3*3, 1 : no convolution, 1: border pixels
         nn.BatchNorm2d(out_channels),
         nn.ReLU(inplace=True),
 
