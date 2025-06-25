@@ -73,7 +73,7 @@ def plot_metrics(working_dir, experiment_name, training_loss, test_loss, config)
   os.makedirs(save_dir, exist_ok= True)
 
 
-  #Modifier la font size par défaut
+  #Modifying default font size
   plt.rcParams.update({'font.size' : 14})
 
   fig, ax = plt.subplots(figsize=(10,6))
