@@ -16,16 +16,7 @@ The idea is using computer vision in order to annotate corrosion particles semi-
 
 📁 Videos/ – data  Makogon, A., & SHKIRSKIY, S. (2025). Zenodo. https://doi.org/10.5281/zenodo.14653184  
 📁 src/ – main code  
-    📄 config.py  
-    📄 dataset.py  
-    📄 metrics.py  
-    📄 model.py  
-    📄 preprocessing.py  
-    📄 train.py  
-    📄 vizualisation.py  
 📁 notebooks/ – Initial exploration  
-  📄 test.ipynb  
-  📄 data_generation.ipynb  
 📄 README.md  
 📄 requirements.txt  
 
