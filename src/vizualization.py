@@ -40,7 +40,7 @@ def show_predictions(dloader, model, nbr_images = 3):
   with torch.no_grad():
     output = torch.sigmoid(model(images.to(DEVICE))) # (8,1,256,256)
 
-  # Seuil de la sigmoid
+  # Sigmoid Threshold
   output = ((output > 0.5)*1.0).detach().cpu().numpy()
 
   for idx in range(nbr_images):
@@ -51,7 +51,7 @@ def show_predictions(dloader, model, nbr_images = 3):
 
     fig, axs = plt.subplots(1,3,figsize=(25,25))
 
-    #Afficher
+    #Display
     axs[0].imshow(image,cmap='gray')
     axs[0].set_title(os.path.basename(images_paths[idx]))
     axs[0].axis('off')
