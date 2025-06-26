@@ -129,6 +129,37 @@ each followed by batch normalization and a ReLU activation function.
     return self.conv(x)
 
 def create_model(config):
+"""
+create_model(config: dict) -> Tuple[torch.nn.Module, torch.nn.Module, torch.optim.Optimizer]
+
+Initializes a U-Net++ segmentation model using `segmentation_models_pytorch`, along with the
+binary cross-entropy loss and Adam optimizer.
+
+📌 Purpose:
+- Create a ready-to-train segmentation model with preconfigured architecture, loss, and optimizer
+
+🔧 Parameters:
+- config (dict): Dictionary containing configuration options. Required keys:
+    - 'encoder': name of the encoder (e.g., 'resnet34', 'efficientnet-b0', etc.)
+    - 'weights': pretrained weights for the encoder (e.g., 'imagenet')
+    - 'lr': learning rate (float)
+
+🚀 Returns:
+- model (torch.nn.Module): U-Net++ model instance
+- loss (torch.nn.Module): Binary cross-entropy loss with logits (BCEWithLogitsLoss)
+- optimizer (torch.optim.Optimizer): Adam optimizer for the model's parameters
+
+🖥️ Device:
+- Automatically uses GPU if available; falls back to CPU otherwise
+
+🧠 Notes:
+- Input images are assumed to have 1 channel
+- Output is a single-channel mask (binary segmentation)
+- Activation is set to `None` because the final activation (sigmoid) is usually applied during inference
+
+✅ Example:
+  model, loss_fn, optimizer = create_model(config)
+"""
   ENCODER = config['encoder']
   ENCODER_WEIGHTS = config['weights']
   LR = config['lr']
