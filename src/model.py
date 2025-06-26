@@ -4,6 +4,37 @@ import torchvision.transforms.functional as TF
 import segmentation_models_pytorch as smp
   
 class UNET(nn.Module):
+"""
+UNET(nn.Module)
+
+This is a PyTorch implementation of the U-Net architecture, widely used for image segmentation tasks.
+
+🧠 Overview:
+- Composed of a contracting path (encoder) and an expansive path (decoder)
+- Skip connections are used to concatenate high-resolution features from the encoder to the decoder
+- Particularly effective for biomedical image segmentation and tasks requiring precise localization
+
+🔧 Parameters:
+- in_channels (int): Number of input channels (e.g., 1 for grayscale images, 3 for RGB)
+- out_channels (int): Number of output channels (e.g., 1 for binary segmentation)
+- features (list[int]): List of feature map sizes for each encoder level (default: [64, 128, 256, 512])
+
+🧱 Components:
+- `DoubleConv`: A building block composed of two convolutional layers (3x3), each followed by BatchNorm and ReLU activation
+- `MaxPool2d`: Reduces the spatial resolution by half at each encoder step
+- `ConvTranspose2d`: Performs upsampling in the decoder path
+- `final_conv`: A 1x1 convolution that reduces the final feature map to the desired number of output channels
+
+⚙️ Forward Pass:
+- The input is passed through a sequence of `DoubleConv` blocks and downsampled using max pooling
+- Features are stored at each encoder level for skip connections
+- A bottleneck block processes the deepest features
+- Decoder upsamples the features using `ConvTranspose2d` and concatenates them with corresponding skip connections
+- Final output is generated with a 1x1 convolution, preserving the original spatial dimensions
+
+📈 Output:
+- Returns a segmentation map of shape `(batch_size, out_channels, height, width)`
+"""
 
     def __init__(self, in_channels=1, out_channels=1, features=[64,128,256,512]):
       super(UNET, self).__init__()
