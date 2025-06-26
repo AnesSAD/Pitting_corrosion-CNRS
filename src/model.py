@@ -178,7 +178,25 @@ binary cross-entropy loss and Adam optimizer.
      
 
 def test():
+"""test()
 
+Performs a simple forward pass through the U-Net model to verify that it runs without errors.
+
+📌 Purpose:
+- Check whether the UNET model is correctly defined and can process a sample input
+- Useful for debugging model architecture or tensor shape mismatches
+
+🚀 What it does:
+- Creates a dummy input tensor of shape (1, 1, 161, 161), simulating a single grayscale image
+- Initializes a U-Net model with 1 input and 1 output channel
+- Passes the input through the model to ensure it produces an output without errors
+
+⚠️ Note:
+- This is not a unit test with assertions. It's a basic smoke test to ensure forward propagation works.
+
+✅ Example usage:
+  test()
+"""
   x = torch.randn((1,1,161,161))
   model = UNET(in_channels=1,out_channels=1)
   preds = model(x)
