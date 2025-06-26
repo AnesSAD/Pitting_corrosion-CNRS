@@ -165,7 +165,7 @@ binary cross-entropy loss and Adam optimizer.
   LR = config['lr']
   DEVICE = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
   loss = torch.nn.BCEWithLogitsLoss()
-  model = smp.UnetPlusPlus(encoder_name=ENCODER,
+  model = smp.UnetPlusPlus(encoder_name=ENCODER, #Unet++ used here but can also use Unet 
                        encoder_weights = ENCODER_WEIGHTS,
                        classes = 1,
                        activiation = None,
