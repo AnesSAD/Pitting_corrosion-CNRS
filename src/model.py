@@ -84,6 +84,33 @@ This is a PyTorch implementation of the U-Net architecture, widely used for imag
       return self.final_conv(x)
 
 class DoubleConv(nn.Module):
+"""
+DoubleConv(nn.Module)
+
+This class defines a basic building block used in U-Net architectures: two consecutive convolutional layers,
+each followed by batch normalization and a ReLU activation function.
+
+📌 Purpose:
+- Extract and refine spatial features in an image
+- Used in both the encoder and decoder parts of U-Net
+
+🔧 Parameters:
+- in_channels (int): Number of input channels (e.g., 1 for grayscale, 3 for RGB)
+- out_channels (int): Number of output channels produced by the block
+
+🧠 Architecture:
+- Two 2D convolution layers (3x3 kernel, stride=1, padding=1, no bias)
+- Each followed by BatchNorm2d and ReLU activation
+- Preserves spatial dimensions (height and width)
+
+🌀 Forward Pass:
+- Takes an input tensor of shape (B, in_channels, H, W)
+- Returns a tensor of shape (B, out_channels, H, W)
+
+✅ Example:
+  block = DoubleConv(1, 64)
+  out = block(input_tensor)
+"""
 
   def __init__(self, in_channels, out_channels):
     super(DoubleConv, self).__init__()
