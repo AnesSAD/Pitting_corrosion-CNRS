@@ -33,13 +33,13 @@ Raw images and ground thruth masks needs to be in the same folder. Masks should 
 
 '''python
 
-dataset/
-├── image_1.png
-├── mask_1.png
-├── image_2.png
-├── mask_2.png
-├── image_3.png
-├── mask_3.png
+dataset/  
+├── image_1.png  
+├── mask_1.png  
+├── image_2.png  
+├── mask_2.png  
+├── image_3.png  
+├── mask_3.png  
 
 
     
