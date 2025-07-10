@@ -29,6 +29,11 @@ The idea is using computer vision in order to annotate corrosion particles semi-
 - OpenCV
 - Scikit-learn
 - Matplotlib
+- Albumentations
+- segmentation-models-pytorch
+- tensorboard
+- scikit-image
+- seaborn
 
 ## Dataset file stucture
 Raw images and ground thruth masks needs to be in the same folder. Masks should have the mention "mask" in their name and each mask should correspond to a raw image. The dataset file should be structured as follows :  
@@ -49,8 +54,14 @@ dataset/
 After corretly structuring you dataset file, execute the training with the following line in you terminal.
 
 ```bash
+pip install -r requirements.txt
+```
+
+```bash
+cd src
 python main.py --dataset_dir "path to your dataset"
 ```
+
 You can also test the training of the model step by step using this notebook [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AnesSAD/Pitting_corrosion-CNRS/blob/main/notebooks/test.ipynb)
 
 ## Author 

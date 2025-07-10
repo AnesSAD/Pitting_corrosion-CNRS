@@ -1,5 +1,10 @@
 torch
 numpy
-open-cv
+opencv-python
 matplotlib
 scikit-learn
+albumentations
+segmentation-models-pytorch
+tensorboard
+scikit-image
+seaborn
