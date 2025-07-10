@@ -39,7 +39,8 @@ dataset/
 ├── image_2.png  
 ├── mask_2.png  
 ├── image_3.png  
-├── mask_3.png  
+├── mask_3.png
+...
 ```
 
     
