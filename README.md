@@ -47,7 +47,7 @@ dataset/
 After corretly structuring you dataset file, execute the training with the following line in you terminal.
 
 ```bash
-python main.py --dataset_dir /path/to/dataset
+python main.py --dataset_dir "path to you dataset"
 ```
     
 
