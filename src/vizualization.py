@@ -30,7 +30,7 @@ def show_images(dloader):
   axs[1].axis('off')
   
   
-def show_predictions(dloader, model, nbr_images = 3):
+def show_predictions(dloader, model, nbr_images = 3, output_dir):
 
   DEVICE = torch.device('cuda' if torch.cuda.is_available else 'cpu')
 
@@ -65,6 +65,7 @@ def show_predictions(dloader, model, nbr_images = 3):
     axs[2].axis('off')
 
     plt.show()
+    plt.savefig(output_dir+'predictions')
 
 def plot_metrics(working_dir, experiment_name, training_loss, test_loss, config):
 

@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.metrics import f1_score, accuracy_score, precision_score, recall_score
 
-def compute_metrics(dloader, model):
+def compute_metrics(dloader, model, output_dir):
 
   print('COMPUTING METRICS ...')
 
@@ -56,3 +56,4 @@ def compute_metrics(dloader, model):
     ax.text(i,v+0.002,str(round(v,2)),ha='center',va='bottom')
 
   plt.show()
+  plt.savefig(output_dir + 'metrics')
