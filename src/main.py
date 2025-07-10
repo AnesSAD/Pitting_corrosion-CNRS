@@ -12,6 +12,22 @@ from torch import utils
 
 def main(dataset_dir):
     
+    # Metrics directory
+    train_dir = None
+    currrent_dir = "../models/"
+    dirs = os.listdir(current_dir)
+    
+    if bool(dirs) == False:
+        os.mkdir(current_dir + 'train1')
+    else:
+        last_train = sorted(dirs)[-1]
+        last_train = int(last_train.split('train')[-1])
+        os.mkdir(f'{current_dir}train{last_train+1}')
+    dirs = os.listdir(current_dir)
+    train_dir = dirs[-1]
+    
+        
+    
     # Importing images and masks
     path = dataset_dir #path to dataset folder
     all_images = sorted([os.path.join(path,img) for img in sorted(os.listdir(path)) if img.endswith('.png') and 'mask' not in img])
@@ -40,17 +56,17 @@ def main(dataset_dir):
     # Model 
     model, loss, optimizer = create_model(cfg)
     
-    training_loss, testing_loss = training(cfg,os.path.join('..','model'), "weights", dloader_train, dloader_test, model, optimizer, loss )
+    training_loss, testing_loss = training(cfg,train_dir, "weights", dloader_train, dloader_test, models, optimizer, loss )
     
     
     #Loss function
-    plot_metrics(os.path.join('..', 'model'), "Loss function", training_loss, testing_loss, cfg)
+    plot_metrics(train_dir, "Loss function", training_loss, testing_loss, cfg)
     
     # Predictions
-    show_predictions(dloader_test, model, nbr_images=3, os.path.join('..','model'))
+    show_predictions(dloader_test, model, nbr_images=3, train_dir)
     
     #Compute metrics
-    compute_metrics(dloader_test, model, os.path.join('..','model'))
+    compute_metrics(dloader_test, model, train_dir)
     
 
 if __name__ == "__main__":

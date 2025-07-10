@@ -16,7 +16,7 @@ The idea is using computer vision in order to annotate corrosion particles semi-
 
 📁 videos/ – data [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1234567.svg)](https://doi.org/10.5281/zenodo.14653184)  
 📁 dataset/ – 110 images dataset  
-📁 models/ – Weights and metrics
+📁 models/ – Weights and metrics  
 📁 notebooks/ – Initial exploration  
 📁 src/ – main code  
 📄 README.md  
