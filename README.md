@@ -31,7 +31,7 @@ The idea is using computer vision in order to annotate corrosion particles semi-
 ## Dataset file stucture
 Raw images and ground thruth masks needs to be in the same folder. Masks should have the mention "mask" i their name and each mask should correspond to a raw image. The dataset file should be structured as follows :  
 
-'''python
+```python
 
 dataset/  
 ├── image_1.png  
