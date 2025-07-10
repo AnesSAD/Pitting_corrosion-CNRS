@@ -19,7 +19,7 @@ def compute_entropy(patch):
     uint_patch = img_as_ubyte(patch)
     return np.mean(entropy(uint_patch, disk(5)))
     
-def extract_patches(image, patch_size=200, stride=100, entropy_thresh=3.0, concentration=None, frame = None):
+def extract_patches(    ):
     h, w = image.shape[:2]
     patch_id = 0
 
