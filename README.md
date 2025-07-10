@@ -29,7 +29,7 @@ The idea is using computer vision in order to annotate corrosion particles semi-
 - Matplotlib
 
 ## Dataset file stucture
-Raw images and ground thruth masks needs to be in the same folder. Masks should have the mention "mask" i their name and each mask should correspond to a raw image. The dataset file should be structured as follows :  
+Raw images and ground thruth masks needs to be in the same folder. Masks should have the mention "mask" in their name and each mask should correspond to a raw image. The dataset file should be structured as follows :  
 
 ```python
 
@@ -43,6 +43,12 @@ dataset/
 ...
 ```
 
+## How to use
+After corretly structuring you dataset file, execute the training with the following line in you terminal.
+
+```bash
+python main.py --dataset_dir /path/to/dataset
+```
     
 
 ## Status
