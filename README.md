@@ -43,18 +43,13 @@ dataset/
 ...
 ```
 
-## How to use
+## How to use it
 After corretly structuring you dataset file, execute the training with the following line in you terminal.
 
 ```bash
-python main.py --dataset_dir "path to you dataset"
+python main.py --dataset_dir "path to your dataset"
 ```
     
-
-## Status
-
-⌛ In progress... 
-
 ## Author 
 
 Anes SADAOUI -  In the context of a Master 2 (2024/2025) intership at CNRS under the supervision of Slava  SHKIRSKIY.
