@@ -51,7 +51,8 @@ After corretly structuring you dataset file, execute the training with the follo
 ```bash
 python main.py --dataset_dir "path to your dataset"
 ```
-    
+You can also test the training of the model step by step using this notebook [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AnesSAD/Pitting_corrosion-CNRS/blob/main/notebooks/test.ipynb)
+
 ## Author 
 
 Anes SADAOUI -  In the context of a Master 2 (2024/2025) intership at CNRS under the supervision of Slava  SHKIRSKIY.
