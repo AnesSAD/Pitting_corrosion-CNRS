@@ -14,7 +14,7 @@ def main(dataset_dir):
     
     # Metrics directory
     train_dir = None
-    currrent_dir = "../models/"
+    current_dir = "../models/"
     dirs = os.listdir(current_dir)
     
     if bool(dirs) == False:
@@ -23,8 +23,8 @@ def main(dataset_dir):
         last_train = sorted(dirs)[-1]
         last_train = int(last_train.split('train')[-1])
         os.mkdir(f'{current_dir}train{last_train+1}')
-    dirs = os.listdir(current_dir)
-    train_dir = dirs[-1]
+    dirs = sorted(os.listdir(current_dir))
+    train_dir = current_dir + dirs[-1] + '/'
     
         
     
@@ -56,14 +56,14 @@ def main(dataset_dir):
     # Model 
     model, loss, optimizer = create_model(cfg)
     
-    training_loss, testing_loss = training(cfg,train_dir, "weights", dloader_train, dloader_test, models, optimizer, loss )
+    training_loss, testing_loss = training(cfg,train_dir, "weights", dloader_train, dloader_test, model, optimizer, loss )
     
     
     #Loss function
     plot_metrics(train_dir, "Loss function", training_loss, testing_loss, cfg)
     
     # Predictions
-    show_predictions(dloader_test, model, nbr_images=3, train_dir)
+    show_predictions(dloader_test, model, train_dir, nbr_images=3)
     
     #Compute metrics
     compute_metrics(dloader_test, model, train_dir)

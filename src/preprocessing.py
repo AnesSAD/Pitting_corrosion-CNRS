@@ -1,4 +1,4 @@
-ropimport numpy as np
+import numpy as np
 import cv2 as cv
 from skimage.filters.rank import entropy
 from skimage.morphology import disk

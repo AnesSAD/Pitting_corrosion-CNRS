@@ -30,7 +30,7 @@ def show_images(dloader):
   axs[1].axis('off')
   
   
-def show_predictions(dloader, model, nbr_images = 3, output_dir):
+def show_predictions(dloader, model,output_dir, nbr_images = 3):
 
   DEVICE = torch.device('cuda' if torch.cuda.is_available else 'cpu')
 
