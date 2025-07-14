@@ -60,7 +60,7 @@ def slice_image(image, patch_size=224, stride=100):
     🔧 Parameters:
     - image (np.array): considered image
     - patch_size (int, default : 224): considered slices size
-    - stride=100 (int, default=100) : corresponds to the number of pixels shifted (horizontaly and verticaly) between 2 images 
+    - stride (int, default=100) : corresponds to the number of pixels shifted (horizontaly and verticaly) between 2 images 
 
     🚀 Returns:
     - patches (list) : list of numpy array corresponding to each slice
@@ -114,3 +114,49 @@ def reconstruct_image(initial_image, slices, stride):
         
 
     return thresh
+    
+
+def main(image_path):
+    """Main loop that slices the image, make the inference ont each slice and reconstruct the full image.
+    
+    🔧 Parameters:
+    - image_path = location of the full resolution image
+    - 
+
+
+    🚀 Returns:
+    - thresh : single numpy array corresponding to the reconstructed segmentation mask
+    """
+
+    train_dir = sorted(os.listdir("../models"))[-1]
+    weights_path = "../models/" + train_dir + "/weights/best_model_microscope.pth"
+    model = torch.load(weights_path, map_location='cpu', weights_only=False)
+    
+    image = cv.imread("image_path")
+    
+    patches = slice_image(image) # Slices are made with a stride of 100 pixels meaning two consecutive image corresponds to a 100 pixels shift
+    
+    seg_masks = []
+    for img in patches:
+        mask = infer_single_image(img,model)
+        seg_masks.append(mask)
+    
+    reconstructed_image = reconstruct_image(image,seg_masks,100)
+
+
+    return reconstructed_image
+
+
+
+if __name__ == "__main__":
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--image_path', type=str, required=True)
+    
+    args = parser.parse_args()
+    
+    main(image_path)
+    
+
+
+
