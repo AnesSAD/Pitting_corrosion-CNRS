@@ -50,8 +50,15 @@ dataset/
 ...
 ```
 
+## Image pre-processing 
+In one hand, the full resolution of images are 2448x2452. In another hand the average size of a particle is about tens of pixels maximum. The size ratio between the full resolution and the size of a particle emerges an imbalance problem making the segmentation of particle very difficult.  
+For this reason, we sliced each image into multiple smaller images of 224x224 that can be used to train the model. Therefor, particles occupy a much more amount of pixels in the image and facilitate the training.  
+The inference will be made on each slice separately before reconstructing the whole image.
+
 ## How to use it
-After corretly structuring you dataset file, execute the training with the following line in you terminal.
+
+### Model training
+After correctly structuring you dataset file, execute the training with the following line in you terminal.
 
 ```bash
 pip install -r requirements.txt
@@ -62,7 +69,13 @@ cd src
 python main.py --dataset_dir "path to your dataset"
 ```
 
-You can also test the training of the model step by step using this notebook [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AnesSAD/Pitting_corrosion-CNRS/blob/main/notebooks/test.ipynb)
+You can also test the training of the model step by step using this notebook [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AnesSAD/Pitting_corrosion-CNRS/blob/main/notebooks/test.ipynb).  
+  
+### Image inference
+You can make an inference on a single image using the latest weights saved by executing the following line : 
+```bash
+```
+
 
 ## Author 
 
