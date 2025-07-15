@@ -2,6 +2,7 @@
 
 
 - config.py : parameters for model training (image size, learning rate...)
+  -> Hyper-parameters 
 - dataset.py : class and functions for dataloading and image augmentation
 - inference.py : main executable code for single image inference. Contains image slicing, inference and image reconstruction functions
 - main.py : main executable code for model training. Contains model initialization, forward, backward propagation function, evaluation and saving of performances metrics. Saving of weights.
