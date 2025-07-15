@@ -109,7 +109,7 @@ Here is an example of particle segmentation after training U-Net on 110 images d
 ## 📄 Documents
 
 - [📘 Internship report (PDF)](images/INTERNSHIP_REPORT_Anes_SADAOUI.pdf)  
-- [📊 Internship defense (slides)](images/Internship - oral-defense.pdf)
+- [📊 Internship defense (slides)](images/Internship-oral-defense.pdf)  
 
 ## Author 
 
