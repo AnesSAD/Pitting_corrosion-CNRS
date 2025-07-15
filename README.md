@@ -43,6 +43,8 @@ The idea is using computer vision and fast marching algorithm in order to annota
 - tensorboard
 - scikit-image
 - seaborn
+- eikonalfm
+- ipympl
 
 ## Dataset file stucture
 Raw images and ground thruth masks needs to be in the same folder. Masks should have the mention "mask" in their name and each mask should correspond to a raw image. The dataset file should be structured as follows :  
@@ -66,6 +68,14 @@ The inference will be made on each slice separately before reconstructing the wh
 
 ## How to use it
 
+### Semi-automatic annotation using fast marching
+<p align="center">
+  <strong>Contours found by fast marching :</strong><br><br>
+  <img src="images/fast_marching_result.png" alt="FM" width="400"/>
+</p>  
+
+From right to left : area of high intensity gradients, distance map and contours found by fast marching method.
+
 ### Model training
 After correctly structuring you dataset file, execute the training with the following line in you terminal.
 
@@ -83,10 +93,11 @@ You can also test the training of the model step by step using this notebook [![
 ### Image inference
 You can make an inference on a single image using the latest weights saved by executing the following line : 
 ```bash
+python inference.py --image_path "path to your image"
 ```
 
 ### Results
-Here is an example of particle segmentation after training U-net on 110 during 100 epochs : 
+Here is an example of particle segmentation after training U-net on 110 images during 100 epochs : 
 <p align="center">
   <img src="images/unet_results.png" alt="ejection" width="400"/>
 </p> 
