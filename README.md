@@ -85,6 +85,12 @@ You can make an inference on a single image using the latest weights saved by ex
 ```bash
 ```
 
+### Results
+Here is an example of particle segmentation after training U-net on 110 during 100 epochs : 
+<p align="center">
+  <img src="images/unet_results.png" alt="ejection" width="400"/>
+</p> 
+
 
 ## Author 
 
