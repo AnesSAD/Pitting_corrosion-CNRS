@@ -83,6 +83,11 @@ A demonstration of the script is also available at [![Open In Colab](https://col
 After correctly structuring you dataset file, execute the training with the following line in your terminal.
 
 ```bash
+python -m venv env
+source env/bin/activate
+```
+
+```bash
 pip install -r requirements.txt
 ```
 
