@@ -71,7 +71,7 @@ The inference will be made on each slice separately before reconstructing the wh
 ### Semi-automatic annotation using fast marching
 <p align="center">
   <strong>Contours found by fast marching :</strong><br><br>
-  <img src="images/fast_marching_result.png" alt="FM" width="400"/>
+  <img src="images/fast_marching_result.png" alt="FM" width="800"/>
 </p>  
 
 From right to left : area of high intensity gradients, distance map and contours found by fast marching method.
