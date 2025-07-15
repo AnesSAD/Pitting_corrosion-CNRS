@@ -1,7 +1,10 @@
 # DEEP LEARNING PROJECT - Corrosion product recognition using CNN and computer vision
+## Context 
 
+Pitting corrosion is one of the most aggressive form of corrosion that causes over 2.5 trillion USD loss every year. This corrosion is characterized by the formation of pits from which corrosion particles can be ejected.  
+![ejection](images/ejection.png)
 This project has the objective of applying computer vision techniques and CNN in order to accurately recognize corrosion product seen on microscopic images.
-The idea is using computer vision in order to annotate corrosion particles semi-automatically. Then build a CNN from scratch that fits best the prediction of these particles.
+The idea is using computer vision and fast marching algorithm in order to annotate corrosion particles semi-automatically. Then build a CNN from scratch that fits best the prediction of these particles.
 
 ## Objectives
 
@@ -13,6 +16,7 @@ The idea is using computer vision in order to annotate corrosion particles semi-
 - Visualisation of the results and tracking performances of the model
 
 ## Structure
+
 
 📁 videos/ – data [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1234567.svg)](https://doi.org/10.5281/zenodo.14653184)  
 📁 dataset/ – 110 images dataset  
