@@ -3,6 +3,7 @@ import cv2 as cv
 import numpy as np
 import torch
 import matplotlib.pyplot as plt
+import argparse
 
 def infer_single_image(image, model, device='cuda'):
     """
@@ -66,7 +67,7 @@ def slice_image(image, patch_size=224, stride=100):
     - patches (list) : list of numpy array corresponding to each slice
         
     """
-    h, w = image.shape
+    h, w = image.shape[:2]
     patch_id = 0
 
     patches = []
@@ -132,7 +133,7 @@ def main(image_path):
     weights_path = "../models/" + train_dir + "/weights/best_model_microscope.pth"
     model = torch.load(weights_path, map_location='cpu', weights_only=False)
     
-    image = cv.imread("image_path")
+    image = cv.imread(image_path)
     
     patches = slice_image(image) # Slices are made with a stride of 100 pixels meaning two consecutive image corresponds to a 100 pixels shift
     
@@ -142,6 +143,11 @@ def main(image_path):
         seg_masks.append(mask)
     
     reconstructed_image = reconstruct_image(image,seg_masks,100)
+    reconstructed_image = reconstructed_image*255.0
+    
+    cv.imwrite("../images/reconstructed_image.jpeg", reconstructed_image)
+    
+    print("Mask saved to images/ directory")
 
 
     return reconstructed_image
@@ -155,7 +161,7 @@ if __name__ == "__main__":
     
     args = parser.parse_args()
     
-    main(image_path)
+    main(args.image_path)
     
 
 
