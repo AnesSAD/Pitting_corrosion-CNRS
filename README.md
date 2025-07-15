@@ -4,8 +4,8 @@
 Pitting corrosion is one of the most aggressive form of corrosion that causes over 2.5 trillion USD loss every year. This corrosion is characterized by the formation of pits from which corrosion particles can be ejected.  
   
 <p align="center">
+  <strong>Schematic representation of corrosion products ejection :</strong><br><br>
   <img src="images/ejection.png" alt="ejection" width="400"/>
-  <strong>Schematic representation of corrosion products ejection </strong><br><br>
 </p>  
   
 This project has the objective of applying computer vision techniques and CNN in order to accurately recognize corrosion product seen on microscopic images.
