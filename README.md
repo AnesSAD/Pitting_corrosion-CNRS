@@ -2,7 +2,9 @@
 ## Context 
 
 Pitting corrosion is one of the most aggressive form of corrosion that causes over 2.5 trillion USD loss every year. This corrosion is characterized by the formation of pits from which corrosion particles can be ejected.  
-![ejection](images/ejection.png)
+  
+![ejection](images/ejection.png)  
+  
 This project has the objective of applying computer vision techniques and CNN in order to accurately recognize corrosion product seen on microscopic images.
 The idea is using computer vision and fast marching algorithm in order to annotate corrosion particles semi-automatically. Then build a CNN from scratch that fits best the prediction of these particles.
 
