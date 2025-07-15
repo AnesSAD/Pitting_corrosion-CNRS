@@ -85,6 +85,7 @@ After correctly structuring you dataset file, execute the training with the foll
 ```bash
 git clone https://github.com/AnesSAD/Pitting_corrosion-CNRS.git
 cd Pitting_corrosion-CNRS
+```
 
 ```bash
 python -m venv env
