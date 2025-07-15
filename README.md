@@ -24,7 +24,7 @@ The idea is using computer vision and fast marching algorithm in order to annota
 
 
 📁 videos/ – data [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1234567.svg)](https://doi.org/10.5281/zenodo.14653184)  
-📁 dataset/ – 110 images dataset  
+📁 dataset/ – 110 images training dataset  
 📁 models/ – Weights and metrics  
 📁 notebooks/ – Initial exploration  
 📁 src/ – main code  
@@ -80,7 +80,7 @@ From right to left : area of high intensity gradients, distance map and contours
 A demonstration of the script is also available at [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AnesSAD/Pitting_corrosion-CNRS/blob/main/notebooks/fast_marching_annotation.ipynb).
 
 ### Model training
-After correctly structuring you dataset file, execute the training with the following line in you terminal.
+After correctly structuring you dataset file, execute the training with the following line in your terminal.
 
 ```bash
 pip install -r requirements.txt
@@ -100,11 +100,16 @@ python inference.py --image_path "path to your image"
 ```
 
 ### Results
-Here is an example of particle segmentation after training U-net on 110 images during 100 epochs : 
+Here is an example of particle segmentation after training U-Net on 110 images during 100 epochs : 
 <p align="center">
   <img src="images/unet_results.png" alt="ejection" width="400"/>
 </p> 
 
+
+## 📄 Documents
+
+- [📘 Internship report (PDF)](images/INTERNSHIP_REPORT_Anes_SADAOUI.pdf)  
+- [📊 Internship defense (slides)](images/Internship - oral-defense.pdf)
 
 ## Author 
 
