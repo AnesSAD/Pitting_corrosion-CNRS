@@ -1,7 +1,7 @@
 # Source code structure for image annotation, model training and inference
 
 
-- **config.py** : parameters for model training (image size, learning rate...)
+- **config.py** : parameters for model training (image size, learning rate...)  
   -> Hyper-parameters 
 - **dataset.py** : class and functions for dataloading and image augmentation
 - **inference.py** : main executable code for single image inference. Contains image slicing, inference and image reconstruction functions
