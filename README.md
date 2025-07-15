@@ -83,6 +83,10 @@ A demonstration of the script is also available at [![Open In Colab](https://col
 After correctly structuring you dataset file, execute the training with the following line in your terminal.
 
 ```bash
+git clone https://github.com/AnesSAD/Pitting_corrosion-CNRS.git
+cd Pitting_corrosion-CNRS
+
+```bash
 python -m venv env
 source env/bin/activate
 ```
