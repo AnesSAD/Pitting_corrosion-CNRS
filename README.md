@@ -75,6 +75,7 @@ The inference will be made on each slice separately before reconstructing the wh
 </p>  
 
 From right to left : area of high intensity gradients, distance map and contours found by fast marching method.
+A demonstration of the script is also available at [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AnesSAD/Pitting_corrosion-CNRS/blob/main/notebooks/fast_marching_annotation.ipynb).
 
 ### Model training
 After correctly structuring you dataset file, execute the training with the following line in you terminal.
