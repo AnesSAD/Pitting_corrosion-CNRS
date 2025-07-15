@@ -61,7 +61,7 @@ dataset/
 ...
 ```
 
-## Image pre-processing 
+## Image processing 
 In one hand, the full resolution of images are 2448x2452. In another hand the average size of a particle is about tens of pixels maximum. The size ratio between the full resolution and the size of a particle emerges an imbalance problem making the segmentation of particle very difficult.  
 For this reason, we sliced each image into multiple smaller images of 224x224 that can be used to train the model. Therefor, particles occupy a much more amount of pixels in the image and facilitate the training.  
 The inference will be made on each slice separately before reconstructing the whole image.
@@ -69,12 +69,14 @@ The inference will be made on each slice separately before reconstructing the wh
 ## How to use it
 
 ### Semi-automatic annotation using fast marching
+Fast marching is based on the calculation of intensity gradients.
+
 <p align="center">
   <strong>Contours found by fast marching :</strong><br><br>
   <img src="images/fast_marching_result.png" alt="FM" width="800"/>
 </p>  
 
-From right to left : area of high intensity gradients, distance map and contours found by fast marching method.
+From right to left : area of high intensity gradients, distance map and contours found by fast marching method (background subtracted from the image).
 A demonstration of the script is also available at [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AnesSAD/Pitting_corrosion-CNRS/blob/main/notebooks/fast_marching_annotation.ipynb).
 
 ### Model training
